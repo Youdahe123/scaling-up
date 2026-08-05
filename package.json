@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@excalidraw/excalidraw": "^0.18.1",
     "@mdx-js/react": "^3.1.1",
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
