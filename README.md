@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Scaling Up
 
-## Getting Started
+System design, explained one diagram at a time — written and reviewed by students, for students.
 
-First, run the development server:
+**Live site:** https://youdahe123.github.io/scaling-up/
+
+Scaling Up is a small publication built around one idea: a reading experience should get out of the way, and a system design write-up should teach through its diagram first, prose second. Anyone can draft an article — including drawing the diagram — right in the browser, and every submission goes through review before it's published, the same way a code change would.
+
+## How it works
+
+- **Read** — the feed and reader pages are a fully static site (no tracking, no clutter, fast).
+- **Write** — [`/write`](https://youdahe123.github.io/scaling-up/write/) is an in-browser editor: add sections, draw or import a system diagram with an embedded [Excalidraw](https://excalidraw.com) canvas, and export a ready-to-submit article.
+- **Publish** — articles live as Markdown files in [`content/articles/`](content/articles) and go live once a pull request adding one is reviewed and merged. See [CONTRIBUTING.md](CONTRIBUTING.md).
+- **Subscribe** — an [RSS feed](https://youdahe123.github.io/scaling-up/rss.xml) is live; email delivery isn't wired up yet.
+
+## Tech stack
+
+- [Next.js](https://nextjs.org) (App Router, static export) + [Tailwind CSS](https://tailwindcss.com)
+- [Excalidraw](https://excalidraw.com) for the in-browser diagram editor
+- Content as Markdown with frontmatter, no CMS/database
+- Deployed to [GitHub Pages](https://pages.github.com) via GitHub Actions on every merge to `main`
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To check what a production build (including the GitHub Pages path prefix) will actually look like:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npx serve out
+```
 
-## Learn More
+## Contributing
 
-To learn more about Next.js, take a look at the following resources:
+Whether you want to write an article or work on the site itself, start with [CONTRIBUTING.md](CONTRIBUTING.md). Please also read the [Code of Conduct](CODE_OF_CONDUCT.md).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[MIT](LICENSE)
