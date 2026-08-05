@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { GithubIcon } from "./icons";
 import { SubscribeForm } from "./SubscribeForm";
+import { withBasePath } from "@/lib/basePath";
 
 const CODE_REPO_URL = "https://github.com/Youdahe123/scaling-up";
 const CONTENT_REPO_URL = "https://github.com/Youdahe123/scaling-up/tree/main/content/articles";
@@ -30,6 +31,12 @@ export function SiteFooter() {
             <Link href="/write" className="hover:text-foreground transition">
               Write an article
             </Link>
+            <a
+              href={withBasePath("/rss.xml")}
+              className="hover:text-foreground transition"
+            >
+              RSS feed
+            </a>
             <a
               href={CONTENT_REPO_URL}
               target="_blank"
