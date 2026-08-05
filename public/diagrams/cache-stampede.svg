@@ -1,0 +1,48 @@
+<svg viewBox="0 0 640 340" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif">
+  <rect x="0" y="0" width="640" height="340" rx="20" fill="#fffdf8"/>
+
+  <!-- clients -->
+  <g>
+    <rect x="30" y="60" width="120" height="52" rx="14" fill="#eeecfe" stroke="#5b4fe9" stroke-width="3" transform="rotate(-2 90 86)"/>
+    <text x="90" y="82" text-anchor="middle" font-size="15" font-weight="600" fill="#171321" transform="rotate(-2 90 86)">Client A</text>
+    <text x="90" y="100" text-anchor="middle" font-size="11" fill="#5b4fe9" transform="rotate(-2 90 86)">GET /price</text>
+
+    <rect x="30" y="140" width="120" height="52" rx="14" fill="#eeecfe" stroke="#5b4fe9" stroke-width="3" transform="rotate(1.5 90 166)"/>
+    <text x="90" y="162" text-anchor="middle" font-size="15" font-weight="600" fill="#171321" transform="rotate(1.5 90 166)">Client B</text>
+    <text x="90" y="180" text-anchor="middle" font-size="11" fill="#5b4fe9" transform="rotate(1.5 90 166)">GET /price</text>
+
+    <rect x="30" y="220" width="120" height="52" rx="14" fill="#eeecfe" stroke="#5b4fe9" stroke-width="3" transform="rotate(-1 90 246)"/>
+    <text x="90" y="242" text-anchor="middle" font-size="15" font-weight="600" fill="#171321" transform="rotate(-1 90 246)">Client C</text>
+    <text x="90" y="260" text-anchor="middle" font-size="11" fill="#5b4fe9" transform="rotate(-1 90 246)">GET /price</text>
+  </g>
+
+  <!-- arrows to cache -->
+  <path d="M155 86 C 220 100, 250 140, 300 155" fill="none" stroke="#171321" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M155 166 C 220 166, 250 166, 300 166" fill="none" stroke="#171321" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M155 246 C 220 230, 250 195, 300 178" fill="none" stroke="#171321" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- cache -->
+  <rect x="300" y="120" width="140" height="92" rx="16" fill="#fff1de" stroke="#ff9f43" stroke-width="3.5" transform="rotate(-1 370 166)"/>
+  <text x="370" y="158" text-anchor="middle" font-size="16" font-weight="700" fill="#171321" transform="rotate(-1 370 166)">Cache</text>
+  <text x="370" y="178" text-anchor="middle" font-size="12" fill="#c96a00" transform="rotate(-1 370 166)">key expired ✕</text>
+  <text x="370" y="196" text-anchor="middle" font-size="11" fill="#756f83" transform="rotate(-1 370 166)">3 misses at once</text>
+
+  <!-- burst marks -->
+  <path d="M395 118 l8 -14 M410 122 l14 -8 M420 132 l16 -2" stroke="#ff9f43" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- arrow to db, tripled to show stampede -->
+  <path d="M440 150 C 480 140, 500 130, 540 120" fill="none" stroke="#171321" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M440 166 C 480 166, 500 166, 540 166" fill="none" stroke="#171321" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M440 182 C 480 192, 500 202, 540 212" fill="none" stroke="#171321" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- database -->
+  <g transform="rotate(2 585 166)">
+    <ellipse cx="585" cy="110" rx="42" ry="14" fill="#e3f7ee" stroke="#2bb47c" stroke-width="3"/>
+    <path d="M543 110 v90 a42 14 0 0 0 84 0 v-90" fill="#e3f7ee" stroke="#2bb47c" stroke-width="3"/>
+    <path d="M543 140 a42 14 0 0 0 84 0" fill="none" stroke="#2bb47c" stroke-width="2"/>
+    <path d="M543 170 a42 14 0 0 0 84 0" fill="none" stroke="#2bb47c" stroke-width="2"/>
+    <text x="585" y="235" text-anchor="middle" font-size="14" font-weight="700" fill="#171321">Database</text>
+  </g>
+
+  <text x="320" y="30" font-size="13" fill="#756f83">Three requests miss the cache at the same instant — and all three fall through together.</text>
+</svg>

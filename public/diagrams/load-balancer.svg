@@ -1,0 +1,40 @@
+<svg viewBox="0 0 640 340" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif">
+  <rect x="0" y="0" width="640" height="340" rx="20" fill="#fffdf8"/>
+
+  <!-- client -->
+  <rect x="30" y="145" width="110" height="56" rx="14" fill="#eeecfe" stroke="#5b4fe9" stroke-width="3" transform="rotate(-1.5 85 173)"/>
+  <text x="85" y="168" text-anchor="middle" font-size="15" font-weight="600" fill="#171321" transform="rotate(-1.5 85 173)">You</text>
+  <text x="85" y="186" text-anchor="middle" font-size="11" fill="#5b4fe9" transform="rotate(-1.5 85 173)">an HTTP request</text>
+
+  <path d="M145 173 C 200 173, 210 173, 260 173" fill="none" stroke="#171321" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- load balancer: donut -->
+  <g transform="translate(260 100)">
+    <circle cx="60" cy="73" r="58" fill="#fff1de" stroke="#ff9f43" stroke-width="4"/>
+    <circle cx="60" cy="73" r="22" fill="#fffdf8" stroke="#ff9f43" stroke-width="4"/>
+    <text x="60" y="146" text-anchor="middle" font-size="14" font-weight="700" fill="#171321">Load Balancer</text>
+    <text x="60" y="164" text-anchor="middle" font-size="11" fill="#756f83">(yes, the donut)</text>
+  </g>
+
+  <!-- arrows fanning out to 3 servers -->
+  <path d="M395 130 C 440 100, 460 90, 500 78" fill="none" stroke="#171321" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M395 173 C 440 173, 460 173, 500 173" fill="none" stroke="#171321" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M395 216 C 440 246, 460 256, 500 268" fill="none" stroke="#171321" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- servers -->
+  <g>
+    <rect x="500" y="48" width="110" height="56" rx="14" fill="#e3f7ee" stroke="#2bb47c" stroke-width="3" transform="rotate(1 555 76)"/>
+    <text x="555" y="72" text-anchor="middle" font-size="13" font-weight="700" fill="#171321" transform="rotate(1 555 76)">Server 1</text>
+    <text x="555" y="90" text-anchor="middle" font-size="10" fill="#1c8a5c" transform="rotate(1 555 76)">load: light</text>
+
+    <rect x="500" y="145" width="110" height="56" rx="14" fill="#e3f7ee" stroke="#2bb47c" stroke-width="3" transform="rotate(-1 555 173)"/>
+    <text x="555" y="169" text-anchor="middle" font-size="13" font-weight="700" fill="#171321" transform="rotate(-1 555 173)">Server 2</text>
+    <text x="555" y="187" text-anchor="middle" font-size="10" fill="#1c8a5c" transform="rotate(-1 555 173)">load: light</text>
+
+    <rect x="500" y="240" width="110" height="56" rx="14" fill="#e3f7ee" stroke="#2bb47c" stroke-width="3" transform="rotate(1.5 555 268)"/>
+    <text x="555" y="264" text-anchor="middle" font-size="13" font-weight="700" fill="#171321" transform="rotate(1.5 555 268)">Server 3</text>
+    <text x="555" y="282" text-anchor="middle" font-size="10" fill="#1c8a5c" transform="rotate(1.5 555 268)">load: light</text>
+  </g>
+
+  <text x="260" y="30" font-size="13" fill="#756f83">One request in, spread evenly across three identical servers.</text>
+</svg>

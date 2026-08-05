@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fffdf8;
+  --foreground: #171321;
+  --card: #ffffff;
+  --border: #eee7db;
+  --accent: #5b4fe9;
+  --accent-foreground: #ffffff;
+  --accent-soft: #eeecfe;
+  --amber: #ff9f43;
+  --amber-soft: #fff1de;
+  --mint: #2bb47c;
+  --mint-soft: #e3f7ee;
+  --muted: #756f83;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-soft: var(--accent-soft);
+  --color-amber: var(--amber);
+  --color-amber-soft: var(--amber-soft);
+  --color-mint: var(--mint);
+  --color-mint-soft: var(--mint-soft);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-fredoka);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #14121c;
+    --foreground: #f3f1fa;
+    --card: #1c1928;
+    --border: #2c2838;
+    --accent: #8b80ff;
+    --accent-foreground: #14121c;
+    --accent-soft: #2a2540;
+    --amber: #ffb066;
+    --amber-soft: #3a2c1c;
+    --mint: #4fd39a;
+    --mint-soft: #17332a;
+    --muted: #9a94ac;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+.prose-article {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: var(--foreground);
+}
+
+.prose-article > * + * {
+  margin-top: 1.4em;
+}
+
+.prose-article h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 2.2em;
+  letter-spacing: -0.01em;
+}
+
+.prose-article h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: 1.8em;
+}
+
+.prose-article p {
+  color: var(--foreground);
+}
+
+.prose-article strong {
+  font-weight: 700;
+}
+
+.prose-article ul,
+.prose-article ol {
+  padding-left: 1.4em;
+}
+
+.prose-article li + li {
+  margin-top: 0.5em;
+}
+
+.prose-article ul li {
+  list-style: disc;
+}
+
+.prose-article ol li {
+  list-style: decimal;
+}
+
+.prose-article code {
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 0.15em 0.4em;
+  border-radius: 0.4em;
+  font-size: 0.9em;
+}
+
+.prose-article a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

@@ -1,0 +1,42 @@
+<svg viewBox="0 0 640 380" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif">
+  <rect x="0" y="0" width="640" height="380" rx="20" fill="#fffdf8"/>
+  <text x="320" y="34" text-anchor="middle" font-size="13" fill="#756f83">Keys and nodes both land on the same ring — a key belongs to the next node clockwise.</text>
+
+  <circle cx="320" cy="210" r="140" fill="none" stroke="#171321" stroke-width="3" stroke-dasharray="1 10" stroke-linecap="round"/>
+
+  <!-- nodes on ring -->
+  <g>
+    <circle cx="320" cy="70" r="26" fill="#eeecfe" stroke="#5b4fe9" stroke-width="3.5"/>
+    <text x="320" y="75" text-anchor="middle" font-size="13" font-weight="700" fill="#171321">N1</text>
+
+    <circle cx="460" cy="210" r="26" fill="#eeecfe" stroke="#5b4fe9" stroke-width="3.5"/>
+    <text x="460" y="215" text-anchor="middle" font-size="13" font-weight="700" fill="#171321">N2</text>
+
+    <circle cx="320" cy="350" r="26" fill="#eeecfe" stroke="#5b4fe9" stroke-width="3.5"/>
+    <text x="320" y="355" text-anchor="middle" font-size="13" font-weight="700" fill="#171321">N3</text>
+
+    <circle cx="180" cy="210" r="26" fill="#eeecfe" stroke="#5b4fe9" stroke-width="3.5"/>
+    <text x="180" y="215" text-anchor="middle" font-size="13" font-weight="700" fill="#171321">N4</text>
+  </g>
+
+  <!-- key dots -->
+  <g>
+    <circle cx="400" cy="105" r="9" fill="#ff9f43" stroke="#c96a00" stroke-width="2"/>
+    <text x="400" y="90" text-anchor="middle" font-size="11" fill="#c96a00" font-weight="600">key: "cat.png"</text>
+    <path d="M400 114 A140 140 0 0 1 452 186" fill="none" stroke="#ff9f43" stroke-width="2" stroke-dasharray="4 5" marker-end="url(#arrow)"/>
+
+    <circle cx="430" cy="300" r="9" fill="#2bb47c" stroke="#1c8a5c" stroke-width="2"/>
+    <text x="452" y="320" text-anchor="middle" font-size="11" fill="#1c8a5c" font-weight="600">key: "user:42"</text>
+    <path d="M430 309 A140 140 0 0 1 335 349" fill="none" stroke="#2bb47c" stroke-width="2" stroke-dasharray="4 5" marker-end="url(#arrow)"/>
+
+    <circle cx="220" cy="90" r="9" fill="#5b4fe9" stroke="#3f36c9" stroke-width="2"/>
+    <text x="205" y="75" text-anchor="middle" font-size="11" fill="#3f36c9" font-weight="600">key: "order:7"</text>
+    <path d="M225 99 A140 140 0 0 1 305 71" fill="none" stroke="#5b4fe9" stroke-width="2" stroke-dasharray="4 5" marker-end="url(#arrow)"/>
+  </g>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#171321"/>
+    </marker>
+  </defs>
+</svg>
